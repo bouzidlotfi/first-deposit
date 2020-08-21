@@ -1,12 +1,108 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <title></title>
+    <head> 
+        <title>Shopping Cart</title>
+        <link rel="stylesheet" href="./style.css">
     </head>
     <body>
-        <script type="text/javascript" src="./script.js">
+        
+        <div class="navbar"> <img src="logo1.png" width="120px" weight="120px"><h2>Online Shop</h2> </div>
+        <div class="container">           
+                <div class="item1">
+                    <div class="article">
+                    <img src="hoddies.jpg" height="250px" width="300px">
+                    <div class="mod">
+                        <h3 class="hod" id="marque1">Vièrge</h3>
+                        <h4 id="price1">2400DA</h4>
+                    <div class="inputs">
+            <input type="number" id="quantité1" name="quantité" min="1" max="99" value="1">
+            <select id="size1" name="size1">
+                <option value="size">Taille</option>
+                <option value="XS">XS</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <div>
+                <button class="addTo">Add</button>
+            </div>
+        </div>
+      
+                  </div>
+                  </div>
+              
+        <div class="item2">
+            <div class="article">
+            <img src="hoddies1.webp" height="250px" width="300px">
+            <div class="mod">
+                <h3 class="hod" id="marque2">BlackTYPE</h3>
+                <h4 id="price2">3800DA</h4>
+            </div>
+            
+            <div class="inputs">
+                <input type="number" id="quantité2" name="quantité2" min="1" max="99" value="1">
+                <select id="size2" name="size2">
+                    <option value="size">Taille</option>
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+                <div>
+                    <button class="addTo" onclick="add(2)">Add</button>
+                </div>
+            </div>
+           
+            </div>
+        </div>
+        <div class="item3">
+            <div class="article">
+            <img src="hoddies2.jpg"  height="250px" width="300px">
+            <div class="mod">
+                <h3 class="hod" id="marque3">H&M Style</h3>
+                <h4 id="price3">3600DA</h4>
+            </div>
+        
+            <div class="inputs">
+                <input type="number" id="quantité3" name="quantité3" min="1" max="99" value="1">
+                <select id="size3" name="size2">
+                    <option value="size">Taille</option>
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+            </div>
+            <div>
+                <button class="addTo" onclick="add(3)">Add</button>
+            </div>
+        </div>
+       
+        </div>
+    </div>
+        </div>
+        <div class="cart">
+            <h3 class="hod">Mes produits</h3>
+            <ul id="items"></ul>
+            <h3 class="total">Total : 0DA</h3>
+        </div>
+        <script  type="text/javascript" src="./script.js">
+          var total =0;
+          var i=1;
           
+          var itemCost =[]; 
+          function add(n){
+            marque = "marque" +n;
+            priceId= "price" + n;
+            quantitéId = "quantité" +n;
+            name= documentgetElementById(marque).innerHTML;
+            price =document.getElementById(priceId).innerHTML;
+            quantité= document.getElementById(quantitéId).value;
 
-        </script>
+          }
+        </script>      
     </body>
 </html>
